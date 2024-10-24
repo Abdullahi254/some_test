@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-import { FaHome, FaUser, FaCog } from 'react-icons/fa';
+import { FaHome, FaCog } from 'react-icons/fa';
 import { RxDashboard } from "react-icons/rx";
 import { usePathname} from 'next/navigation'
 
@@ -33,7 +33,12 @@ const Sidebar = () => {
                             <span>Trips</span>
                         </Link>
                     </li>
-                    <li className={pathName == '/settings' ? 'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer text-purple-300':
+
+                </ul>
+            </div>
+
+            <ul className="space-y-4">
+            <li className={pathName == '/settings' ? 'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer text-purple-300':
                         'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer'
                     }>
                         <FaCog size={20} />
@@ -41,19 +46,6 @@ const Sidebar = () => {
                             <span>Settings</span>
                         </Link>
                     </li>
-
-                </ul>
-            </div>
-
-            <ul className="space-y-4">
-            <li className={pathName == '/profile' ? 'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer text-purple-300':
-                        'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer'
-                    }>
-                    <FaUser size={20} />
-                    <Link href="/profile">
-                        <span>Profile</span>
-                    </Link>
-                </li>
             </ul>
 
         </div>
