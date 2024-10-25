@@ -9,36 +9,36 @@ const LatestTrips = () => {
                 <button className='text-purple-300 text-sm'>See all</button>
             </div>
             <li className='w-full flex justify-between'>
-                <div className='flex space-x-2'>
-                    <h1 className='text-2xl text-yellow-300'>1.</h1>
-                    <h2 className='text-lg'>Nextgen Mall, Nairobi</h2>
+                <div className='flex space-x-2 items-center'>
+                    <h1 className='text-lg text-yellow-300'>1.</h1>
+                    <h2 className='text-sm'>Nextgen Mall, Nairobi</h2>
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-600'>Tue Oct 22, 2024 2:30</h3>
                 </div>
             </li>
             <li className='w-full flex justify-between'>
-                <div className='flex space-x-2'>
-                    <h1 className='text-2xl text-yellow-300'>1.</h1>
-                    <h2 className='text-lg'>Nextgen Mall, Nairobi</h2>
+                <div className='flex space-x-2 items-center'>
+                    <h1 className='text-lg text-yellow-300'>1.</h1>
+                    <h2 className='text-sm'>Nextgen Mall, Nairobi</h2>
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-600'>Tue Oct 22, 2024 2:30</h3>
                 </div>
             </li>
             <li className='w-full flex justify-between'>
-                <div className='flex space-x-2'>
-                    <h1 className='text-2xl text-yellow-300'>1.</h1>
-                    <h2 className='text-lg'>Nextgen Mall, Nairobi</h2>
+                <div className='flex space-x-2 items-center'>
+                    <h1 className='text-lg text-yellow-300'>1.</h1>
+                    <h2 className='text-sm'>Nextgen Mall, Nairobi</h2>
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-600'>Tue Oct 22, 2024 2:30</h3>
                 </div>
             </li>
             <li className='w-full flex justify-between'>
-                <div className='flex space-x-2'>
-                    <h1 className='text-2xl text-yellow-300'>1.</h1>
-                    <h2 className='text-lg'>Nextgen Mall, Nairobi</h2>
+                <div className='flex space-x-2 items-center'>
+                    <h1 className='text-lg text-yellow-300'>1.</h1>
+                    <h2 className='text-sm'>Nextgen Mall, Nairobi</h2>
                 </div>
                 <div>
                     <h3 className='text-sm text-gray-600'>Tue Oct 22, 2024 2:30</h3>

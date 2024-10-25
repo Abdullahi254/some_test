@@ -4,7 +4,7 @@ import TopThree from "./components/Dashboard/TopThree";
 
 export default function Home() {
   return (
-    <div className="max-w-[80%] grid gap-4  grid-cols-2 mx-auto h-[90vh] mt-6">
+    <div className="max-w-[80%] grid gap-4  grid-cols-2 mx-auto mt-6">
       <div className="col-span-2 border-red-500 ">
         <LineGraph />
       </div>

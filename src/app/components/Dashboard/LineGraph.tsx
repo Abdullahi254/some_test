@@ -66,7 +66,7 @@ const LineGraph = () => {
 
     return (
         <div className="w-full h-full">
-            <h2 className="text-xl w-fit font-semibold mb-4 text-white">Trips Over Time</h2>
+            <h2 className="w-fit font-semibold mb-4 text-white">Trips Over Time</h2>
             <div className='p-4 rounded-3xl border border-purple-300 shadow-lg shadow-gray-500 h-96'>
                 <Line data={data} options={{ ...options, maintainAspectRatio: false }} />
             </div>

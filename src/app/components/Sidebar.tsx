@@ -25,7 +25,7 @@ const Sidebar = () => {
                         </Link>
 
                     </li>
-                    <li className={pathName == '/trips' ? 'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer text-purple-300':
+                    <li className={pathName.includes('trips') ? 'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer text-purple-300':
                         'flex items-center space-x-4 p-2 rounded-md hover:text-purple-300 cursor-pointer'
                     }>
                         <RxDashboard size={20} />
