@@ -12,12 +12,27 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-function TopThree() {
+function TopThree(res: any) {
+  console.log("top three", res)
+  const visitedDestinations:Record<string, number>  = {}
+  res.dts.trips.forEach((trip: any)=>{
+    if(visitedDestinations[trip.dropoff_location]){
+      visitedDestinations[trip.dropoff_location] = visitedDestinations[trip.dropoff_location] + 1
+    }else{
+      visitedDestinations[trip.dropoff_location] = 1
+    }
+  })
+  const sortedDestinations = Object.entries(visitedDestinations)
+  .sort((a, b) => b[1] - a[1]); 
+
+
+const topPlaces = sortedDestinations.slice(0, 3).map(entry => entry[0]);
+const topCounts = sortedDestinations.slice(0, 3).map(entry => entry[1]);
   const data = {
     datasets: [
       {
         label: 'Top Three Destination',
-        data: [300, 150, 100], // Replace with actual visit counts
+        data: topCounts, 
         backgroundColor: [
           'rgba(128, 0, 128, 0.6)', // Purple
           'rgba(255, 0, 0, 0.6)',   // Red
@@ -58,7 +73,7 @@ function TopThree() {
         <div className="text-white">
           <h3 className="text font-semibold mb-2">Legend</h3>
           <ul>
-            {['Most Visited 1', 'Most Visited 2', 'Most Visited 3'].map((label, index) => (
+            {topPlaces.map((label, index) => (
               <li key={index} className="flex items-center mb-1 text-sm">
                 <span
                   className="inline-block w-3 h-3 mr-2"

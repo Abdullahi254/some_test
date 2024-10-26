@@ -14,7 +14,7 @@ const page = () => {
                 </Link>
 
                 <div className='px-4 bg-[#1a1a1a] rounded-xl flex justify-between space-x-4 items-center'>
-                    <span className='text-gray-300 text-xs'>Name</span>
+                    <span className='text-gray-300 text-xs'>Richard</span>
                     <IoMdClose className='text-white cursor-pointer' />
                 </div>
                 <div className='px-4 bg-[#1a1a1a] rounded-xl flex justify-between space-x-4 items-center'>

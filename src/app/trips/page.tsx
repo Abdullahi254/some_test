@@ -3,6 +3,7 @@ import SearchBox from '../components/Trip/SearchBox'
 import Status from '../components/Trip/Status'
 import DistanceComponent from '../components/Trip/DistanceComponent'
 import TimeComponent from '../components/Trip/TimeComponent'
+import SearchButton from '../components/Trip/SearchButton'
 
 
 const page = () => {
@@ -21,9 +22,7 @@ const page = () => {
         </div>
       </div>
       <div className='w-full text-center'>
-        <button className='w-[20%] bg-purple-400 text-white text-sm px-6 py-2 rounded-xl hover:bg-purple-500'>
-          SEARCH
-        </button>
+      <SearchButton/>
       </div>
     </div>
   )

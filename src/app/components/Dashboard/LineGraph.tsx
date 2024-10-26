@@ -23,13 +23,37 @@ ChartJS.register(
 );
 
 
-const LineGraph = () => {
+const LineGraph = ({dts}: any) => {
+    console.log(dts.trips)
+    const hashMap  = {
+    } as any
+    const tripsByMonth = dts.trips.forEach((v:any)=>{
+        const myDate = new Date(v?.dropoff_date)
+        let month = myDate.getMonth()
+        let monthString = month.toString()
+        if(hashMap[monthString]){
+            hashMap[monthString] = hashMap[monthString] + 1
+        }
+        else{
+            hashMap[monthString] = 1
+        }
+    })
+    console.log("my map", hashMap)
+
+    let list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    let finalList = list.map(val=>{
+        if(hashMap[val]){
+            return hashMap[val]
+        }else{
+            return 0
+        }
+    })
     const data = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [
             {
                 label: 'Trips Over Time',
-                data: [30, 20, 50, 40, 60, 80],
+                data: finalList,
                 borderColor: '#ba68c8', 
                 backgroundColor: 'rgba(56, 189, 248, 0.2)', 
                 fill: true,
